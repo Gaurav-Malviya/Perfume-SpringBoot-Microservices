@@ -1,0 +1,50 @@
+drop database usersDB;
+create schema usersDB;
+use usersDB;
+
+create table buyers
+(
+    `buyer id` int primary key,
+     name varchar(50),
+     email varchar(50),
+    `phone number` bigint,
+     password varchar(50),
+    `creed member` BOOLEAN,
+    `reward points` int,
+    `credit` bigint
+);
+
+#Nykaa style reqRD AYATEM
+insert into buyers values (1,"Tom Cruise","tom.cruise@hotmail.com",7007007001,"greyvetiver@9sigma#",TRUE,245,60000);
+insert into buyers values (2,"Johnny Depp","johnny.depp@gmail.com",7007007002,"greymusknote@9sigma#",TRUE,3200,31473);
+insert into buyers values (3,"Megan Fox","megan.fox@yahoo.com",7007007003,"cherynote@9cocochanel",FALSE,0,100000);
+insert into buyers values (4,"Sonia Constant","sonia.constant@gmail.com",7007007004,"theperfumequeen@42",TRUE,4234,1000);
+
+
+create table sellers
+(
+    `seller id` integer primary key,
+     name varchar(50),
+     email varchar(100),
+    `phone number` bigint,
+     password varchar(50),
+     pause BOOLEAN
+
+create table cart
+(
+   `buyer id` int primary key,
+   `product id` int primary key,
+    quantity int
+);
+
+create table wishlist
+(
+   `buyer id` int primary key,
+   `product id` int primary key,
+    quantity int
+);
+
+commit;
+
+
+select * from buyers;

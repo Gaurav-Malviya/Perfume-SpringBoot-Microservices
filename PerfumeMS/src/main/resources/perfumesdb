@@ -1,0 +1,44 @@
+#cd /usr/local/mysql/bin/mysql
+#./mysql -u root -p
+
+drop database perfumesDB;
+create schema perfumesDB;
+use perfumesDB;
+
+create table perfumes
+(
+    `product id` integer primary key,
+    `seller id` bigint,
+    company varchar(50),
+    `product name` varchar(50),
+     description varchar(300),
+     price integer,
+     stock integer,
+     gender varchar(50),
+     rating float
+);
+
+insert into perfumes values (1,100,"Tom Ford","Oud Wood","Oud Wood by Tom Ford is a Amber Woody fragrance..",16000,20,"unisex",5);
+insert into perfumes values (2,100,"Christian Dior","Sauvage Elixir","The nose behind this fragrance is Francois Demachy..",11900,15,"men",4.5);
+insert into perfumes values (3,100,"Hermes","H24","The nose behind this fragrance is Christine Nagel..",6800,32,"men",3.9);
+insert into perfumes values (4,101,"Tom Ford","Fucking Fabulous","Fucking Fabulous was launched in 2017..",22000,9,"unisex",3.8);
+insert into perfumes values (5,101,"Tom Ford","Lost Cherry","The nose behind this fragrance is Louise Turner..",22000,12,"women",4.2);
+insert into perfumes values (6,100,"Paco Rabanne","Invictus Legend","The nose behind this fragrance is Domitille Bertier..",6600,47,"men",3.9);
+insert into perfumes values (7,100,"Floris","Leather Oud","Leather Oud was launched in 2014..",11600,9,"unisex",4.2);
+insert into perfumes values (8,100,"Christian Dior","Dior Homme Intense","The nose behind this fragrance is OG Francois Demachy..",10400,0,"men",4.5);
+insert into perfumes values (9,100,"Versace","Dylan Blue","The nose behind this fragrance is OG Alberto Morillas..",8900,50,"men",4.4);
+insert into perfumes values (10,101,"Azzaro","Wanted By Night","Wanted by Night was launched in 2018..",6200,2,"men",4.2);
+
+create table subscription
+(
+    `buyer_id` integer,
+    `product_id`integer,
+     `number of samples` int,
+     PRIMARY KEY (`buyer_id`,`product_id`)
+); 
+insert into subscription values (1000,1,4);
+
+
+commit;
+
+select * from perfumes;
