@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -17,6 +18,8 @@ import com.perfumesite.perfumems.entity.Perfume;
 import com.perfumesite.perfumems.service.PerfumeService;
 
 @RestController
+@CrossOrigin
+
 public class PerfumeController 
 {
 	@Autowired
@@ -59,15 +62,24 @@ public class PerfumeController
 		return perfumeService.getPerfumeByGender(category);
 	}
 	
+	//seller increasing perfume stock
 	@PutMapping(value="seller/{productId}/{stock}")
 	public String sellerPerfumeStock(@PathVariable int productId, @PathVariable int stock)
 	{
 		return perfumeService.sellerPerfumeStock(productId, stock);
 	}
 	
+	//buyer decreasing perfume stock
 	@PutMapping(value="buyer/{productId}/{stock}")
 	public String buyerPerfumeStock(@PathVariable int productId, @PathVariable int stock)
 	{
 		return perfumeService.buyerPerfumeStock(productId, stock);
+	}
+	
+	//Delete the perfume based on the seller --> sub-routine for USER API
+	@DeleteMapping(value="{sellerId}/perfumes")
+	public String deleteSellerPerfumes(@PathVariable int sellerId)
+	{
+		return perfumeService.deleteSellerPerfumes(sellerId);
 	}
 }

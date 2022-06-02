@@ -13,5 +13,5 @@ import lombok.NoArgsConstructor;
 public class CartCompKey implements Serializable
 {
 	int buyerId;
-	int sellerId;
+	int productId;
 }

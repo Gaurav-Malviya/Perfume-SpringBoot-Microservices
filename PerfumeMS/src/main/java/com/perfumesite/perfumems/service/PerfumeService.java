@@ -106,22 +106,15 @@ public class PerfumeService
 					return "You bought "+temp+" "+perfumeEntity.getProductName()+" and currently "+perfumeEntity.getStock()+" are available.";
 				}
 			}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+			public String deleteSellerPerfumes(int sellerId)
+			{
+				List<Perfume> perfumesEntity = perfumeRepo.findBySeller(sellerId);
+				for(Perfume perfumeEntity: perfumesEntity)
+				{
+					perfumeRepo.delete(perfumeEntity);
+				}
+				return "Successfully deleted perfumes which were sold by "+sellerId;
+			}
 	
 }

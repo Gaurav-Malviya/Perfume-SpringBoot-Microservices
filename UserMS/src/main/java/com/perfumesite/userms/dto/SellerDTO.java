@@ -7,9 +7,9 @@ public class SellerDTO
 	int sellerId;
 	String name;
 	String email;
-	int phoneNumber;
+	long phoneNumber;
 	String password;
-	boolean pauseAccount;
+	boolean activate;
 	
 	public int getSellerId() {
 		return sellerId;
@@ -29,10 +29,11 @@ public class SellerDTO
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public int getPhoneNumber() {
+	
+	public long getPhoneNumber() {
 		return phoneNumber;
 	}
-	public void setPhoneNumber(int phoneNumber) {
+	public void setPhoneNumber(long phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
 	public String getPassword() {
@@ -41,14 +42,15 @@ public class SellerDTO
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public boolean isPauseAccount() {
-		return pauseAccount;
-	}
-	public void setPauseAccount(boolean pauseAccount) {
-		this.pauseAccount = pauseAccount;
-	}
 	
-	public SellerDTO toDto(Seller entity)
+	
+	public boolean isActivate() {
+		return activate;
+	}
+	public void setActivate(boolean activate) {
+		this.activate = activate;
+	}
+	public static SellerDTO toDto(Seller entity)
 	{
 		SellerDTO seller = new SellerDTO();
 		seller.setSellerId(entity.getSellerId());
@@ -56,11 +58,11 @@ public class SellerDTO
 		seller.setEmail(entity.getEmail());
 		seller.setPhoneNumber(entity.getPhoneNumber());
 		seller.setPassword(entity.getPassword());
-		seller.setPauseAccount(entity.isPauseAccount());
+		seller.setActivate(entity.isActivate());
 		return seller;
 	}
 	
-	public Seller toEntity(SellerDTO dto)
+	public static Seller toEntity(SellerDTO dto)
 	{
 		Seller seller = new Seller();
 		seller.setSellerId(dto.getSellerId());
@@ -68,7 +70,7 @@ public class SellerDTO
 		seller.setEmail(dto.getEmail());
 		seller.setPhoneNumber(dto.getPhoneNumber());
 		seller.setPassword(dto.getPassword());
-		seller.setPauseAccount(dto.isPauseAccount());
+		seller.setActivate(dto.isActivate());
 		return seller;
 	}
 }

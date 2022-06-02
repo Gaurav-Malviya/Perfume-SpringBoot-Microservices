@@ -8,12 +8,12 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Entity(name="wishlist")
+@Entity(name="favourite")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@IdClass(WishlistCompKey.class)
-public class Wishlist
+@IdClass(FavouriteCompKey.class)
+public class Favourite
 {
 	@Id
 	@Column(name="`buyer id`")
@@ -21,7 +21,6 @@ public class Wishlist
 	@Id
 	@Column(name="`product id`")
 	int productId;
-	int quantity;
 	
 	public int getBuyerId() {
 		return buyerId;
@@ -34,12 +33,6 @@ public class Wishlist
 	}
 	public void setProductId(int productId) {
 		this.productId = productId;
-	}
-	public int getQuantity() {
-		return quantity;
-	}
-	public void setQuantity(int quantity) {
-		this.quantity = quantity;
 	}
 	
 }

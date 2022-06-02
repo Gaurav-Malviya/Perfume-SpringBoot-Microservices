@@ -10,8 +10,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode
-public class WishlistCompKey implements Serializable
+public class FavouriteCompKey implements Serializable
 {
 	int buyerId;
-	int sellerId;
+	int productId;
 }

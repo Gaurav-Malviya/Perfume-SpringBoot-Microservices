@@ -1,24 +1,16 @@
-package com.perfumesite.perfumems.entity;
+package com.perfumesite.userms.dto;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
 
-@Entity(name="Perfumes")
-public class Perfume 
+
+public class PerfumeDTO
 {
-	@Id
-	@Column(name="`product id`")
 	int productId;
-	@Column(name="`seller id`")
 	int sellerId;
-    @Column(name="company")
 	String companyName;
-    @Column(name="`product name`")
 	String productName;
 	String description;
 	int price;
-	Integer stock;
+	int stock;
 	String gender;
 	float rating;
 	
@@ -58,10 +50,10 @@ public class Perfume
 	public void setPrice(int price) {
 		this.price = price;
 	}
-	public Integer getStock() {
+	public int getStock() {
 		return stock;
 	}
-	public void setStock(Integer stock) {
+	public void setStock(int stock) {
 		this.stock = stock;
 	}
 	public String getGender() {
@@ -76,11 +68,4 @@ public class Perfume
 	public void setRating(float rating) {
 		this.rating = rating;
 	}
-	
-	public Perfume()
-	{
-		super();
-	}
-	
-
 }

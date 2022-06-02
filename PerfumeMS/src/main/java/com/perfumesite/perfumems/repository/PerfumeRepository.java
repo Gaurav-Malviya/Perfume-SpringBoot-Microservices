@@ -11,5 +11,8 @@ public interface PerfumeRepository extends JpaRepository<Perfume,Integer>
 {
 
 	List<Perfume>findByGender(String gender);
+	
+	@Query("SELECT p FROM Perfumes p WHERE sellerId=?1")
+	List<Perfume> findBySeller(int sellerId);
 
 }

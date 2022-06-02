@@ -5,5 +5,6 @@ import com.perfumesite.userms.entity.Buyer;
 
 public interface BuyerRepository extends JpaRepository<Buyer,Integer>
 {
-
+	Boolean existsByPhoneNumber(Long phoneNumber);
+	Boolean existsByEmailId(String emailId);
 }

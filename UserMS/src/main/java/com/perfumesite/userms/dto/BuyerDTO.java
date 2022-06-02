@@ -7,7 +7,7 @@ public class BuyerDTO
 	int buyerId;
 	String name;
 	String email;
-	int phoneNumber;
+	long phoneNumber;
 	String password;
 	boolean creedMember;
 	int rewardPoints;
@@ -31,10 +31,10 @@ public class BuyerDTO
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public int getPhoneNumber() {
+	public long getPhoneNumber() {
 		return phoneNumber;
 	}
-	public void setPhoneNumber(int phoneNumber) {
+	public void setPhoneNumber(long phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
 	public String getPassword() {
@@ -62,7 +62,7 @@ public class BuyerDTO
 		this.credit = credit;
 	}
 	
-	public BuyerDTO toDTO(Buyer entity)
+	public static BuyerDTO toDTO(Buyer entity)
 	{
 		BuyerDTO buyer = new BuyerDTO();
 		buyer.setBuyerId(entity.getBuyerId());
@@ -76,15 +76,15 @@ public class BuyerDTO
 		return buyer;
 	}
 	
-	public Buyer toEntity(Buyer dto)
+	public static Buyer toEntity(BuyerDTO dto)
 	{
 		Buyer buyer = new Buyer();
 		buyer.setBuyerId(dto.getBuyerId());
 		buyer.setName(dto.getName());
-		buyer.setEmailId(dto.getEmailId());
+		buyer.setEmailId(dto.getEmail());
 		buyer.setPhoneNumber(dto.getPhoneNumber());
 		buyer.setPassword(dto.getPassword());
-		buyer.setCreedMember(dto.getCreedMember());
+		buyer.setCreedMember(dto.isCreedMember());
 		buyer.setRewardPoints(dto.getRewardPoints());
 		buyer.setCredit(dto.getCredit());
 		return buyer;

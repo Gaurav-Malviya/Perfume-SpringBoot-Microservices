@@ -28,23 +28,33 @@ create table sellers
      email varchar(100),
     `phone number` bigint,
      password varchar(50),
-     pause BOOLEAN
+     activate BOOLEAN
+
+);
+
+insert into sellers values ( 100,"Nordstorm","florida@nordstorm.com",9009009001,"floridamangogo",true);
+insert into sellers values ( 101,"Sephora","florida@sephora.com",9009009002,"tampabaybuccs@12",true);
+insert into sellers values ( 102,"macys","kansa@macys.com",9009009003,"chiefsmahomes#^&@",false);
+insert into sellers values ( 103,"neiman marcus","dallas@neimanmarcus.com",9009009004,"texasmills!&",false);
+ 
+
 
 create table cart
 (
-   `buyer id` int primary key,
-   `product id` int primary key,
-    quantity int
+   `buyer id` int ,
+   `product id` int ,
+    quantity int,
+    PRIMARY KEY (`buyer id`,`product id`)
 );
 
-create table wishlist
+create table favourite
 (
-   `buyer id` int primary key,
-   `product id` int primary key,
-    quantity int
+   `buyer id` int ,
+   `product id` int ,
+    PRIMARY KEY (`buyer id`,`product id`)
 );
 
 commit;
 
 
-select * from buyers;
+show tables;

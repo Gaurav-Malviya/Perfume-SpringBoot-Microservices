@@ -11,9 +11,10 @@ public class Buyer
 	@Column(name="`buyer id`")
 	int buyerId;
 	String name;
+	@Column(name="email")
 	String emailId;
 	@Column(name="`phone number`")
-	int phoneNumber;
+	long phoneNumber;
 	String password;
 	@Column(name="`creed member` ")
 	boolean creedMember;
@@ -36,14 +37,14 @@ public class Buyer
 	public String getEmailId() {
 		return emailId;
 	}
+	public long getPhoneNumber() {
+		return phoneNumber;
+	}
 	public void setEmailId(String emailId) {
 		this.emailId = emailId;
 	}
-	public int getPhoneNumber() {
-		return phoneNumber;
-	}
-	public void setPhoneNumber(int phoneNumber) {
-		this.phoneNumber = phoneNumber;
+	public void setPhoneNumber(long l) {
+		this.phoneNumber = l;
 	}
 	public String getPassword() {
 		return password;

@@ -13,10 +13,9 @@ public class Seller
 	String name;
 	String email;
 	@Column(name="`phone number`")
-	int phoneNumber;
+	long phoneNumber;
 	String password;
-	@Column(name="pause")
-	boolean pauseAccount;
+	boolean activate;
 	
 	public int getSellerId() {
 		return sellerId;
@@ -36,10 +35,10 @@ public class Seller
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public int getPhoneNumber() {
+	public long getPhoneNumber() {
 		return phoneNumber;
 	}
-	public void setPhoneNumber(int phoneNumber) {
+	public void setPhoneNumber(long phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
 	public String getPassword() {
@@ -48,12 +47,10 @@ public class Seller
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public boolean isPauseAccount() {
-		return pauseAccount;
+	public boolean isActivate() {
+		return activate;
 	}
-	public void setPauseAccount(boolean pauseAccount) {
-		this.pauseAccount = pauseAccount;
+	public void setActivate(boolean activate) {
+		this.activate = activate;
 	}
-	
-	
 }
