@@ -29,6 +29,10 @@ insert into perfumes values (8,100,"Christian Dior","Dior Homme Intense","The no
 insert into perfumes values (9,100,"Versace","Dylan Blue","The nose behind this fragrance is OG Alberto Morillas..",8900,50,"men",4.4);
 insert into perfumes values (10,101,"Azzaro","Wanted By Night","Wanted by Night was launched in 2018..",6200,2,"men",4.2);
 insert into perfumes values (11,101,"Chanel","Chanel No 5","The nose behind this fragrance is Jacques Polge..",14950,60,"women",4.8);
+<<<<<<< Updated upstream
+=======
+insert into perfumes values (12,100,"Roja","Roja Elixir","The nose behind this fragrance is Roja Dove..",22500,42,"women",3.8);
+>>>>>>> Stashed changes
 
 create table subscription
 (
