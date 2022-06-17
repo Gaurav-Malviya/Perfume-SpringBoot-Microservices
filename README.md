@@ -4,9 +4,8 @@ Created a two microservices which are perfume microservice and user microservice
 The functionality of microservices are :<br />
 1 Create a new buyer and seller.<br />
 2 Buyer and seller login using credentials.<br />
-3 Activate and deactivate a seller<br />
+3 Activate and deactivate a seller.<br />
 4 Deleting a deactivated seller which will delete all the perfumes seller sell from the perfume database.<br />
 5 Buyer can add a perfume to cart or remove a perfume from cart , which will change the available stock in perfume database.<br />
 6 Buyer can add a perfume to favourite, remove a perfume from favourite or move a perfume from favourite to cart.<br />
-7 One can search all perfume, search based on perfume id or search based on gender.
-<br />
+7 One can search all perfume, search based on perfume id or search based on gender.<br />
