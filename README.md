@@ -1,5 +1,5 @@
 # Perfume SpringBoot Microservices
- My love for perfume is stronger than SHA 256 encryption 
+ My love for perfume is stronger than SHA 256 encryption.
 Created a two microservices which are perfume microservice and user microservice. The perfume microservice talks to perfume database that contains all the perfumes which are available by the seller user. Other microservice, user microservice, talks to both buyer and seller user database. <br />
 The functionality of microservices are :<br />
 1 Create a new buyer and seller.<br />
